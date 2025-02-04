@@ -1,7 +1,20 @@
 const {checkprime,checkperfect,isAmstrong,checkOdd,digitSum, checkEven,funFact} = require('../Utils/functions')
 
 const classify = async(req,res)=>{
-    const number=371;
+    
+    const number = parseInt(req.query.number);
+
+    // Validate input: Check if 'number' is a valid integer
+    if (!/^-?\d+$/.test(number)) {
+        return res.status(400).json({ 
+            number: "alphabet",
+            error:true
+         });
+    }
+
+
+
+
     const check_prime = checkprime(number);
     const check_perfect = checkperfect(number);
     const check_armstrong = isAmstrong(number);

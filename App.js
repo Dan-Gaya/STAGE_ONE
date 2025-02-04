@@ -11,7 +11,7 @@ app.use(express.urlencoded({extended:false}));
 
 app.use(morgan('dev'))
 
-app.use('/classify',classify)
+app.use('/api',classify)
 
 app.use('/',(req,res,next)=>{
     res.send('welcome to HNG12 task 1')
