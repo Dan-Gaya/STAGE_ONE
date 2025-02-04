@@ -58,14 +58,23 @@ function digitSum(number){
     return sum
 
 }
+const cache = new Map();
+
 
 async function funFact(number) {
+    if(cache.has(number)){
+        return cache.get(number);
+    }
+
     try {
 
         const response = await axios.get(`http://numbersapi.com/${number}/math?json`);
         console.log(response);
 
-        return response.data.text; 
+        const fact = response.data.text
+        cache.set(number,fact);
+        
+        return fact; 
 
     } catch (error) {
         console.error("Error fetching number fact:", error);
