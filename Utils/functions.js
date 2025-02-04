@@ -71,9 +71,9 @@ async function funFact(number) {
         const response = await axios.get(`http://numbersapi.com/${number}/math?json`);
         console.log(response);
 
-        const fact = response.data.text
+        const fact = await response.data.text
         cache.set(number,fact);
-        
+
         return fact; 
 
     } catch (error) {
