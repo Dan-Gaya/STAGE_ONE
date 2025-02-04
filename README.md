@@ -81,6 +81,11 @@ If something goes wrong on the server, the response will be:
 }
 ```
 
+```
+### **3️⃣ Deployment**
+the API was deployed on the Url : (https://github.com/Dan-Gaya)
+
+
 ## 🤝 Contributing
 Feel free to fork this repo and submit **pull requests** with any improvements! 🚀
 
