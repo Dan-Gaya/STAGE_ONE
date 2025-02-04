@@ -81,8 +81,9 @@ If something goes wrong on the server, the response will be:
 }
 ```
 
-```
+
 ## 🤝Deployment**
+
 the API was deployed on the Url : (https://stage-one-kappa-bay.vercel.app/api/classify-number)
 
 
@@ -92,6 +93,6 @@ Feel free to fork this repo and submit **pull requests** with any improvements! 
 ## 📜 License
 This project is **open-source** and available under the **MIT License**.
 
----
+
 
 💡 **Author:** [Abdulaziz Nura Kani ](https://github.com/Dan-Gaya)
