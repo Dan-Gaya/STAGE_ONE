@@ -37,7 +37,7 @@ npm install
 ```sh
 npm start
 ```
-The API will be available at: `http://localhost:3000`
+The API will be available locally at: `http://localhost:3000`
 
 ## 📌 API Endpoints
 
@@ -83,7 +83,8 @@ If something goes wrong on the server, the response will be:
 
 ```
 ### **3️⃣ Deployment**
-the API was deployed on the Url : (https://github.com/Dan-Gaya)
+the API was deployed on the Url : (https://stage-one-kappa-bay.vercel.app/api/classify-number)
+
 
 
 ## 🤝 Contributing
