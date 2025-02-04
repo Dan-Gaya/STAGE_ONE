@@ -11,9 +11,12 @@ return (number%2 !== 0);
 }
 
 function checkprime(number){
-    if(number<2) return false 
+    if(number<2) return false ;
+    if(number === 2) return true;
+    if(number% 2 === 0) return false;
 
-    for(i=2; i<number; i++){
+
+    for(i=3; i<Math.sqrt(number); i+=2){
         if(number%i === 0) return false;
 
     }
@@ -23,12 +26,18 @@ function checkprime(number){
 }
 
 function checkperfect(number){
-    let sum=0;
+    if (number<2) return false;
 
-    for(i=1; i < number;i++){
+    let sum=1;
+
+    for(let i=2; i <Math.sqrt(number); i++){
 
         if (number %i === 0){
+
            sum += i;
+           if(i !== number/i){
+            sum+=number/i;
+           }
          }
      
      }
@@ -38,15 +47,24 @@ function checkperfect(number){
 }
 
 function isAmstrong(number){
-    let sum = 0;
-    let orgnum = number ;
-    while( number!== 0){
-        let cubeOfdigit = Math.pow((number %10),3)
-        sum += cubeOfdigit;
-        number = Math.floor(number/10);
-    }
+    // let sum = 0;
+    // let orgnum = number ;
+    // while( number!== 0){
+    //     let cubeOfdigit = Math.pow((number %10),3)
+    //     sum += cubeOfdigit;
+    //     number = Math.floor(number/10);
+    // }
+    const digits = number.toString().split('');
 
-    return sum === orgnum;
+    const numDigits = digits.length;
+
+    const sum = digits.reduce((acc,digit)=>{
+
+        return acc+ Math.pow(Number(digit),numDigits);
+        
+        },0);
+
+    return sum === number;
 
 }
 function digitSum(number){
