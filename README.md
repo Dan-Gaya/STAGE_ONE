@@ -82,7 +82,7 @@ If something goes wrong on the server, the response will be:
 ```
 
 
-## 🤝Deployment**
+## 🤝Deployment
 
 the API was deployed on the Url : (https://stage-one-kappa-bay.vercel.app/api/classify-number)
 
